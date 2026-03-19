@@ -411,17 +411,17 @@ body {
 .hero-inner {
   display: flex;
   align-items: center;
-  gap: 22px;
+  gap: 16px;
 }
 .donut-wrap {
   position: relative;
   flex-shrink: 0;
-  width: 140px;
-  height: 140px;
+  width: 120px;
+  height: 120px;
 }
 .donut-css {
-  width: 140px;
-  height: 140px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   /* mask wycina środek — zostawia pierścień grubości ~28px */
   -webkit-mask: radial-gradient(circle, transparent 46px, black 47px);
@@ -1431,7 +1431,7 @@ function renderDashboard() {
   const monika = expenses.filter(e => e.who === 'Monika').reduce((s, e) => s + e.amount, 0);
 
   // Donut chart SVG
-  const r = 54, cx = 70, cy = 70, circ = 2 * Math.PI * r;
+  const r = 44, cx = 60, cy = 60, circ = 2 * Math.PI * r;
   const safeTotal = totalSpent || 1;
   const segments = [
     { val: wspolne, color: '#8B5CF6', delay: 0 },
@@ -1466,7 +1466,7 @@ function renderDashboard() {
     <div class="hero-card neu-raised animate-in" style="animation-delay:0.05s">
       <div class="hero-inner">
         <div class="donut-wrap">
-          <svg width="140" height="140" viewBox="0 0 140 140">
+          <svg width="120" height="120" viewBox="0 0 120 120">
             <circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="var(--bg)" stroke-width="15"/>
             ${svgSegs}
           </svg>
